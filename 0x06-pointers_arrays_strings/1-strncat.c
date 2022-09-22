@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _strncat - concatenates two strings,
  *@dest: destination.
@@ -8,20 +8,12 @@ nclude "main.h"
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	int count = 0, count2 = 0;
+	int index = 0, dest_len = 0;
 
-	while (*(dest + count) != '\0')
-	{
-		count++;
-	}
+	while (dest[index++])
+		dest_len++;
 
-	while (count2 < n)
-	{
-		*(dest + count) = *(src + count2);
-		if (*(src + count2) == '\0')
-			break;
-		count++;
-		count++;
-	}
+	for (index = 0; src[index] && index < n; index++)
+		dest[dest_len++] = src[index];
 	return (dest);
 }
