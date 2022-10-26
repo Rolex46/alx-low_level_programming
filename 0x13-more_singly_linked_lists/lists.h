@@ -25,7 +25,7 @@ typedef struct listint_s
  *
  * Description: singly linked list of pointers
  */
-typedef struct list_s
+typedef struct listp_s
 {
 	void *p;
 	struct list_s *next;
